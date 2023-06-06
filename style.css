@@ -1,18 +1,27 @@
+@font-face {
+
+  font-family: starWars;
+  
+  src: url(./assets/fuentes/starjedi/Starjedi.ttf);
+  
+  }
 body{
-    padding-top: 50px;
-    /*background: #F7F7F7;*/
-    background-color: bisque;
+    background-color: #6c9ca4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
+.title {
+  font-size: 70px;
+  font-family: starWars
+}
 
 #coin{
     position: relative;
     margin: 0 auto;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
     transform-style: preserve-3d;
     
@@ -23,9 +32,7 @@ body{
     height: 100%;
     position:absolute;
     backface-visibility: hidden; /* Para que solo se vea una cara del div!!!!!!!*/
-    background-color: silver;
-   
-
+    background-color: rgb(152, 168, 194);
     
 }
 
@@ -42,22 +49,32 @@ body{
 }
 
 .tails{
-   background-image: url(./assets/empire.svg);
-   background-size: contain;
-
-    border-radius: 50%;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-      border-radius: 50%;
-      color:white;
-    transform: rotateY(-180deg);  /*hay voltear la parte trasera para que se vea al girar*/
-    
-    }
+  background-image: url(./assets/empire.svg);
+  background-size: contain;
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border-radius: 50%;
+  color:white;
+  transform: rotateY(-180deg);  /*hay voltear la parte trasera para que se vea al girar*/
+  
+  }
     
 .actionbtn{
         margin-top: 5%;
+        width: 10%;
+        border-radius: 50px;
+        background-color: #3c4244;
+        color:aliceblue;
+        font-family: starWars;
     }
+#head-score{
+  font-family: starWars;
+}
+#score{
+  font-family: starWars;
+}
 
 
 .flip_tails{
@@ -70,10 +87,27 @@ body{
     animation-fill-mode: forwards;
 }
 
+@media only screen and (max-width: 480px){
+  
+.title{
+  font-size: 60px;
+  text-align: center;
+
+}
+.actionbtn{
+  margin-top: 10%;
+  width: 30%;
+  
+}
+#head-score{
+  font-size: 25px;
+}
+#score{
+  font-size: 25px;
+}
 
 
-
-
+}
 
 /*Keyframes----------------------------------------------.*/
     @keyframes flipHeads {
