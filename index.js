@@ -59,11 +59,4 @@ button.addEventListener("click", newGame)
 
 
 
-
-
-
-
-
-
-
 })//end
